@@ -1,6 +1,9 @@
 ## 1. Cluster and other resources creating
 
     kind create cluster --config cluster.yml
+    kubectl apply -f infrastructure/ingress/namespace.yml
+    kubectl apply -f infrastructure/ingress/ingress-pod.yml
+    kubectl apply -f infrastructure/ingress/ingress.yml -n todoapp
     ./bootstrap.sh
 
 ## 2. Validate Pod and Service
